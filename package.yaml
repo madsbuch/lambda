@@ -1,0 +1,55 @@
+name:                compilers
+version:             0.1.0.0
+github:              "githubuser/compilers"
+license:             BSD3
+author:              "Mads Buch"
+maintainer:          "me@madsbuch.com"
+copyright:           "2019 Mads Buch"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/compilers#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- parsec
+- QuickCheck
+- hspec
+- unordered-containers
+
+library:
+  source-dirs: src
+
+executables:
+  compilers-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - compilers
+    - parsec
+    - containers
+
+tests:
+  compilers-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - compilers
+    - parsec
