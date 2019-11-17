@@ -25,6 +25,9 @@ dependencies:
 - QuickCheck
 - hspec
 - unordered-containers
+- repline
+- mtl
+- process
 
 library:
   source-dirs: src
@@ -39,8 +42,6 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - compilers
-    - parsec
-    - containers
 
 tests:
   compilers-test:
@@ -52,4 +53,3 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - compilers
-    - parsec
