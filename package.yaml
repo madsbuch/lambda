@@ -1,6 +1,6 @@
-name:                compilers
+name:                lambda
 version:             0.1.0.0
-github:              "githubuser/compilers"
+github:              "madsbuch/lambda"
 license:             BSD3
 author:              "Mads Buch"
 maintainer:          "me@madsbuch.com"
@@ -33,7 +33,7 @@ library:
   source-dirs: src
 
 executables:
-  compilers-exe:
+  lambda-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -41,10 +41,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - compilers
+    - lambda
 
 tests:
-  compilers-test:
+  lambda-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -52,4 +52,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - compilers
+    - lambda
