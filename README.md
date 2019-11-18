@@ -4,10 +4,21 @@
 A Haskell implementation of an interpreter of the lambda
 calculus.
 
+# Quick Start
+To start a REPL, pull this repository, have haskell stack
+installed and do following.
+
 ```
 $ stack build
 $ stack exec lambda-exe
 Lambda Calculus Interpreter!
-λ: (\x.x) (\y.y)
-(λy.y)
+λ: (\x.x) (\y.y y)
+(λy.(y) (y))
 ```
+
+# Running Tests
+A basic test suite is implemented  and can be run by
+the usual `stack test`. The tests support a correct
+implementation. However, they do not guarantee it.
+Some day, when time is, it might be interesting to
+implement the evaluator in a proof assistant.
