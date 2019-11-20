@@ -60,7 +60,3 @@ contents p = do
 
 doParseTerm :: String -> Either ParseError Term
 doParseTerm s = parse (contents (parseTerm [])) "<stdin>" s
-
-doParse s = case doParseTerm s of
-  Right a -> a
-  _ -> error "Can not parse"

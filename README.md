@@ -5,8 +5,8 @@ A Haskell implementation of an interpreter of the lambda
 calculus.
 
 # Quick Start
-To start a REPL, pull this repository, have haskell stack
-installed and do following.
+To start a REPL, pull this repository, have Haskell stack
+installed and do the following:
 
 ```
 $ stack build
@@ -17,7 +17,7 @@ Lambda Calculus Interpreter!
 ```
 
 # Running Tests
-A basic test suite is implemented  and can be run by
+A basic test suite is implemented and can run by
 the usual `stack test`. The tests support a correct
 implementation. However, they do not guarantee it.
 Some day, when time is, it might be interesting to

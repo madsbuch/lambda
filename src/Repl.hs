@@ -12,7 +12,7 @@ import System.IO
 type Repl a = HaskelineT IO a
 
 cmd :: String -> Repl ()
-cmd input = liftIO $ print $ strEval input
+cmd input = liftIO $ putStrLn $ strEval input
 
 completer :: Monad m => WordCompleter m
 completer n = return []
@@ -26,5 +26,7 @@ ini = liftIO $ putStrLn "Lambda Calculus Interpreter!"
 repl :: IO ()
 repl = evalRepl (pure "λ: ") cmd options Nothing (Word completer) ini
 
-strEval :: String -> Term
-strEval s = eval $ doParse s
+strEval :: String -> String
+strEval s = case doParseTerm s of
+  Right a -> show $ eval a
+  Left e -> show e
