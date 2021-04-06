@@ -10,6 +10,7 @@ installed and do the following:
 
 ```
 $ stack build
+$ stack test
 $ stack exec lambda-exe
 Lambda Calculus Interpreter!
 λ: (\x.x) (\y.y y)
